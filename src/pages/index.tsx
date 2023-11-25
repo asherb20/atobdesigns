@@ -2,145 +2,98 @@ import * as React from 'react';
 import type { HeadFC, PageProps } from 'gatsby';
 import Nav from '../components/nav';
 import '../styles/global.css';
+import Carousel from '../components/carousel';
+import { StaticImage } from 'gatsby-plugin-image';
+import { Link } from 'gatsby';
+import { ArrowRightIcon } from '../lib/icons';
 
-// const pageStyles = {
-//   color: '#232129',
-//   padding: 96,
-//   fontFamily: '-apple-system, Roboto, sans-serif, serif'
-// };
-// const headingStyles = {
-//   marginTop: 0,
-//   marginBottom: 64,
-//   maxWidth: 320
-// };
-// const headingAccentStyles = {
-//   color: '#663399'
-// };
-// const paragraphStyles = {
-//   marginBottom: 48
-// };
-// const codeStyles = {
-//   color: '#8A6534',
-//   padding: 4,
-//   backgroundColor: '#FFF4DB',
-//   fontSize: '1.25rem',
-//   borderRadius: 4
-// };
-// const listStyles = {
-//   marginBottom: 96,
-//   paddingLeft: 0
-// };
-// const doclistStyles = {
-//   paddingLeft: 0
-// };
-// const listItemStyles = {
-//   fontWeight: 300,
-//   fontSize: 24,
-//   maxWidth: 560,
-//   marginBottom: 30
-// };
+const SLIDES: any[] = [
+  <StaticImage src='../images/makeitmakesense_preview.png' alt='Make It Make Sense Band Website' />,
+  <StaticImage src='../images/us-ecologic-preview.png' alt='US-EcoLogic Website' />,
+  <StaticImage src='../images/efficiencypromise_preview.png' alt='Efficiency Promise Web App' />
+];
 
-// const linkStyle = {
-//   color: '#8954A8',
-//   fontWeight: 'bold',
-//   fontSize: 16,
-//   verticalAlign: '5%'
-// };
-
-// const docLinkStyle = {
-//   ...linkStyle,
-//   listStyleType: 'none',
-//   display: `inline-block`,
-//   marginBottom: 24,
-//   marginRight: 12
-// };
-
-// const descriptionStyle = {
-//   color: '#232129',
-//   fontSize: 14,
-//   marginTop: 10,
-//   marginBottom: 0,
-//   lineHeight: 1.25
-// };
-
-// const docLinks = [
-//   {
-//     text: 'TypeScript Documentation',
-//     url: 'https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/',
-//     color: '#8954A8'
-//   },
-//   {
-//     text: 'GraphQL Typegen Documentation',
-//     url: 'https://www.gatsbyjs.com/docs/how-to/local-development/graphql-typegen/',
-//     color: '#8954A8'
-//   }
-// ];
-
-// const badgeStyle = {
-//   color: '#fff',
-//   backgroundColor: '#088413',
-//   border: '1px solid #088413',
-//   fontSize: 11,
-//   fontWeight: 'bold',
-//   letterSpacing: 1,
-//   borderRadius: 4,
-//   padding: '4px 6px',
-//   display: 'inline-block',
-//   position: 'relative' as 'relative',
-//   top: -2,
-//   marginLeft: 10,
-//   lineHeight: 1
-// };
-
-// const links = [
-//   {
-//     text: 'Tutorial',
-//     url: 'https://www.gatsbyjs.com/docs/tutorial/getting-started/',
-//     description: "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-//     color: '#E95800'
-//   },
-//   {
-//     text: 'How to Guides',
-//     url: 'https://www.gatsbyjs.com/docs/how-to/',
-//     description: "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-//     color: '#1099A8'
-//   },
-//   {
-//     text: 'Reference Guides',
-//     url: 'https://www.gatsbyjs.com/docs/reference/',
-//     description: "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-//     color: '#BC027F'
-//   },
-//   {
-//     text: 'Conceptual Guides',
-//     url: 'https://www.gatsbyjs.com/docs/conceptual/',
-//     description: 'Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.',
-//     color: '#0D96F2'
-//   },
-//   {
-//     text: 'Plugin Library',
-//     url: 'https://www.gatsbyjs.com/plugins',
-//     description: 'Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.',
-//     color: '#8EB814'
-//   },
-//   {
-//     text: 'Build and Host',
-//     url: 'https://www.gatsbyjs.com/cloud',
-//     badge: true,
-//     description: 'Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!',
-//     color: '#663399'
-//   }
-// ];
+const SERVICES_LINKS: { path: string; title: string }[] = [
+  { path: '/services/websites', title: 'Websites' },
+  { path: '/services/mobile-apps', title: 'Mobile Apps' },
+  { path: '/services/integrations', title: 'Integrations' },
+  { path: '/services/cloud-solutions', title: 'Cloud Solutions' }
+];
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <div>
       <Nav />
-      <main></main>
+      {/* Hero */}
+      <div>
+        <div className='pt-5 pr-2 pb-5 pl-2'>
+          <div className='mb-3'>
+            <div className='mb-2'>
+              <p className='fs-36 fw-bold m-0'>
+                A to B <span className='c-dark'>Designs</span>
+              </p>
+              <p className='fs-32 m-0'>From Concept</p>
+              <p className='fs-32 m-0'>To Completion</p>
+            </div>
+            <div>
+              <Link to='/contact-us' className='bg-light c-white pt-1 pr-2 pb-1 pl-2 fs-16 fw-bold td-none d-inline-block'>
+                Book Free Consultation
+              </Link>
+            </div>
+          </div>
+          <div>
+            <Carousel slides={SLIDES} />
+          </div>
+        </div>
+      </div>
+      {/* Main Content */}
+      <main>
+        <div>
+          <div>
+            <section className='bg-dark pt-5 pr-2 pb-5 pl-2'>
+              <div>
+                <div className='pb-2'>
+                  <h2 className='fs-28 c-white m-0 pb-05'>About Us</h2>
+                  <p className='c-white m-0 fs-16'>We are a web, mobile, and cloud development company based out of Dallas, TX.</p>
+                </div>
+                <div>
+                  <Link to='/contact-us' className='bg-black c-white pt-1 pr-2 pb-1 pl-2 fs-16 fw-bold td-none d-inline-block'>
+                    Learn More About Us
+                  </Link>
+                </div>
+              </div>
+            </section>
+            <section className='pt-5 pr-2 pb-2 pl-2'>
+              <div>
+                <div>
+                  <h2 className='fs-28 pb-05'>
+                    Our <span className='c-dark'>Services</span>
+                  </h2>
+                  <p className='fs-16'>
+                    We specialize in website design, website development, mobile app design, mobile app development, automations, integrations, and cloud solutions.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div className='pl-2 pb-5 pr-2'>
+            <ul className='lst-none'>
+              {SERVICES_LINKS.map((link, index) => (
+                <li key={index} className='mb-1'>
+                  <Link to={link.path} className='td-none d-flex jc-space-between ai-center bg-light c-white pt-1 pr-2 pb-1 pl-1 fs-20 fw-bold'>
+                    <p>{link.title}</p>
+                    <ArrowRightIcon height={32} width={32} color='white' />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </main>
     </div>
   );
 };
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head: HeadFC = () => <title>Home | A to B Designs</title>;

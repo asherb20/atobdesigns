@@ -30,7 +30,7 @@ const config: GatsbyConfig = {
         web: [
           {
             name: `Ubuntu`,
-            file: `https://fonts.googleapis.com/css2?family=Ubuntu&display=swap`
+            file: `https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap`
           }
         ]
       }

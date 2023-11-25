@@ -16,6 +16,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "embla-carousel-autoplay": "^8.0.0-rc14",
+    "embla-carousel-react": "^8.0.0-rc14",
     "gatsby": "^5.12.4",
     "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-plugin-image": "^3.12.3",
