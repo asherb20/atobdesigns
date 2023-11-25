@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+.logo > span {
+  color: #247c7c;
+}
+.colRight > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navListContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #247c7c;
+  width: 320px;
+  height: 100vh;
+}
+.closeBtnContainer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+}
+.navList {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.navLink a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+  padding: 0.5em;
+}
