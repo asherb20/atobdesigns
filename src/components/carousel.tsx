@@ -38,7 +38,12 @@ const Carousel: React.FC<PropType> = ({ slides, options }) => {
       </div>
       <div>
         {scrollSnaps.map((_, index) => (
-          <button className={`bg-light-gray m-05 ${index === selInd ? 'bg-light' : ''}`} style={{ width: 20, height: 20 }} key={index} onClick={() => scrollTo(index)} />
+          <button
+            className={`bg-light-gray pointer m-05 ${index === selInd ? 'bg-light' : ''}`}
+            style={{ width: 20, height: 20 }}
+            key={index}
+            onClick={() => scrollTo(index)}
+          />
         ))}
       </div>
     </div>

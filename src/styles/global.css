@@ -17,6 +17,28 @@ ul {
   padding: 0;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
+.cta-light:hover {
+  background: none;
+  color: #3aafa9;
+}
+.cta-black:hover {
+  background: none;
+  color: black;
+}
+.hov-bg-dark:hover {
+  background: #247c7c;
+}
+.hov-c-dark:hover {
+  color: #247c7c;
+}
+.trans-all {
+  transition: all 0.15s ease-in-out;
+}
+
 /* color */
 .c-white {
   color: #fff;
@@ -52,6 +74,12 @@ ul {
 }
 .border-white {
   border-color: #fff;
+}
+.border-light {
+  border-color: #3aafa9;
+}
+.border-black {
+  border-color: black;
 }
 
 /* padding */
@@ -112,6 +140,9 @@ ul {
 }
 
 /* margin */
+.m-auto {
+  margin: auto;
+}
 .m-05 {
   margin: 0.5em;
 }
@@ -219,6 +250,17 @@ ul {
 .gap-1 {
   column-gap: 1em;
 }
+.text-center {
+  text-align: center;
+}
+
+/* sizing */
+.max-w-lg {
+  max-width: 1200px;
+}
+.w-sm {
+  width: 320px;
+}
 
 @media (min-width: 768px) {
   .med-d-flex {
@@ -241,5 +283,88 @@ ul {
   }
   .med-text-center {
     text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg-d-flex {
+    display: flex;
+  }
+  .lg-flex-1 {
+    flex: 1;
+  }
+  .lg-pt-3 {
+    padding-top: 5em;
+  }
+  .lg-pb-3 {
+    padding-bottom: 5em;
+  }
+  .lg-pos-rel {
+    position: relative;
+  }
+  .lg-pos-abs {
+    position: absolute;
+  }
+  .lg-mw-half {
+    max-width: calc(600px - 4em);
+  }
+  .lg-ml-auto {
+    margin-left: auto;
+  }
+  .lg-mr-auto {
+    margin-right: auto;
+  }
+  .lg-pr-2 {
+    padding-right: 2em;
+  }
+  .lg-pl-2 {
+    padding-left: 2em;
+  }
+  .lg-mt-neg-1 {
+    margin-top: -1em;
+  }
+  .lg-d-none {
+    display: none;
+  }
+  .lg-d-block {
+    display: block;
+  }
+  .lg-bg-none {
+    background: none;
+  }
+  .lg-h-init {
+    height: initial;
+  }
+  .lg-c-black {
+    color: black;
+  }
+  .lg-pos-init {
+    position: initial;
+  }
+  .lg-w-100 {
+    width: 100%;
+  }
+  .lg-gap-1 {
+    column-gap: 1em;
+  }
+  .lg-dl-hover:hover ul {
+    display: block !important;
+  }
+  .lg-bg-light {
+    background-color: #3aafa9;
+  }
+  .lg-c-white a {
+    color: white;
+  }
+  .lg-link-par a:hover {
+    color: #3aafa9;
+    transition: color 0.15s ease-in-out;
+  }
+  .lg-link-child a:hover {
+    color: white;
+  }
+  .lg-link-child li:hover {
+    background-color: #247c7c;
+    transition: background-color 0.15s ease-in-out;
   }
 }

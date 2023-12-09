@@ -14,14 +14,14 @@ const NavLink = ({ title, slugs, children }: { title: string; slugs: string[]; c
 
   if (children && children.length > 0)
     return (
-      <li>
+      <li className='lg-dl-hover pl-1 pr-1'>
         <div className='d-flex jc-space-between ai-center'>
           <div>
-            <Link to={`/${slugs.join('/')}`} className='c-white td-none fs-20 d-block p-05'>
+            <Link to={`/${slugs.join('/')}`} className='c-white td-none fs-20 d-block p-05 lg-c-black'>
               {title}
             </Link>
           </div>
-          <div>
+          <div className='lg-d-none'>
             <button onClick={() => setExpList(!expList)}>
               {expList ? <CaretUpIcon height={24} width={24} color='#fff' /> : <CaretDownIcon height={24} width={24} color='#fff' />}
             </button>
@@ -32,9 +32,9 @@ const NavLink = ({ title, slugs, children }: { title: string; slugs: string[]; c
     );
 
   return (
-    <li>
+    <li className='pl-1 pr-1'>
       <div className='d-flex jc-space-between ai-center'>
-        <Link className='c-white td-none fs-20 d-block p-05' to={`/${slugs.join('/')}`}>
+        <Link className='c-white td-none fs-20 d-block p-05 lg-c-black' to={`/${slugs.join('/')}`}>
           {title}
         </Link>
       </div>
