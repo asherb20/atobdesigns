@@ -8,6 +8,7 @@ import { Link } from 'gatsby';
 import { ArrowRightIcon } from '../lib/icons';
 import Footer from '../components/footer';
 import CallToAction from '../components/cta';
+import BoxLink from '../components/boxLink';
 
 const SLIDES: any[] = [
   <StaticImage src='../images/makeitmakesense_preview.png' alt='Make It Make Sense Band Website' />,
@@ -103,13 +104,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <ul className='lst-none med-d-flex med-flex-wrap med-col-gap-1 max-w-lg m-auto'>
               {SERVICES_LINKS.map((link, index) => (
                 <li key={index} className='mb-1 med-flex-50 lg-flex-1'>
-                  <Link
-                    to={link.path}
-                    className='td-none d-flex jc-space-between ai-center bg-light c-white pt-1 pr-2 pb-1 pl-1 fs-20 fw-bold lg-pt-3 lg-pb-3 hov-bg-dark trans-all'
-                  >
-                    <p>{link.title}</p>
-                    <ArrowRightIcon height={32} width={32} color='white' />
-                  </Link>
+                  <BoxLink path={link.path} title={link.title} />
                 </li>
               ))}
             </ul>

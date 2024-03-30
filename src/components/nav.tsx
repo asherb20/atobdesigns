@@ -22,7 +22,7 @@ const Nav = () => {
   const [expMenu, setExpMenu] = React.useState<boolean>(false);
 
   return (
-    <nav className='pos-sticky top-0 bg-white z-1'>
+    <nav className='pos-sticky top-0 bg-white z-10'>
       <div className='d-flex jc-space-between ai-center pt-1 pr-2 pb-1 pl-2 max-w-lg m-auto'>
         <div>
           <p className='fs-20 fw-bold m-0'>
