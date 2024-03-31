@@ -8,10 +8,10 @@ const LINKS = [
     slug: 'services',
     title: 'Services',
     children: [
-      { slug: 'websites', title: 'Websites' },
-      { slug: 'mobile-apps', title: 'Mobile Apps' },
-      { slug: 'cloud-solutions', title: 'Cloud Solutions' },
-      { slug: 'integrations', title: 'Integrations' }
+      { slug: 'web-design-and-development', title: 'Web Design and Development' },
+      { slug: 'mobile-app-design-and-development', title: 'Mobile App Design and Development' },
+      { slug: 'api-integrations-and-automation', title: 'API Integrations and Automation' },
+      { slug: 'cloud-solutions', title: 'Cloud Solutions' }
     ]
   },
   { slug: 'about-us', title: 'About Us' },
