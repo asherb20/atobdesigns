@@ -10,12 +10,13 @@ interface BoxLinkType {
 
 const BoxLink = ({ path, title, backgroundColor = 'light' }: BoxLinkType) => {
   return (
-    <Link
-      to={path}
-      className={`td-none d-flex jc-space-between ai-center bg-${backgroundColor} c-white pt-1 pr-2 pb-1 pl-1 fs-20 fw-bold lg-pt-3 lg-pb-3 hov-bg-dark trans-all`}
-    >
-      <p>{title}</p>
-      <ArrowRightIcon height={32} width={32} color='white' />
+    <Link to={path} className={`td-none d-flex flex-col bg-${backgroundColor} c-white p-1 fs-20 fw-bold hov-bg-dark trans-all h-100-px lg-h-200-px min-w-200-px`}>
+      <div className='d-flex flex-1 flex-center lg-flex-end'>
+        <p>{title}</p>
+      </div>
+      <div className='d-flex flex-1 flex-end'>
+        <ArrowRightIcon height={32} width={32} color='white' />
+      </div>
     </Link>
   );
 };

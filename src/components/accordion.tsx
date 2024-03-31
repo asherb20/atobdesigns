@@ -15,7 +15,7 @@ const Accordion = ({ items }: AccordionType) => {
 
   return items.map((item, ind) => (
     <div key={ind} className='pb-1'>
-      <button onClick={() => setSelAccInd(ind)} className='bg-light d-flex w-100 jc-space-between ai-center p-2 c-white'>
+      <button onClick={() => setSelAccInd(ind)} className='bg-light d-flex w-100 jc-space-between ai-center p-2 c-white pointer'>
         <p className='fs-20'>{item.title}</p>
         {selAccInd === ind ? <CaretDownIcon width={24} height={24} color='white' /> : <CaretUpIcon width={24} height={24} color='white' />}
       </button>

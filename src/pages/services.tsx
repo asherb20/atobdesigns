@@ -124,7 +124,7 @@ const ServicesPage: React.FC<PageProps> = () => {
           {SERVICES_SECTIONS.map(section => (
             <div className='mt-2 mb-2'>
               <div className={`bg-${section.backgroundColor} c-${section.fontColor} p-2`}>
-                <div className='max-w-lg m-auto lg-d-flex'>
+                <div className='max-w-lg lg-d-flex lg-col-gap-2 m-auto'>
                   <div className='pb-2'>
                     <h3 className='fs-28 pb-1'>{section.title}</h3>
                     {section.paragraphs.map(paragraph => (

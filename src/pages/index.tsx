@@ -4,8 +4,6 @@ import Nav from '../components/nav';
 import '../styles/global.css';
 import Carousel from '../components/carousel';
 import { StaticImage } from 'gatsby-plugin-image';
-import { Link } from 'gatsby';
-import { ArrowRightIcon } from '../lib/icons';
 import Footer from '../components/footer';
 import CallToAction from '../components/cta';
 import BoxLink from '../components/boxLink';
@@ -17,9 +15,9 @@ const SLIDES: any[] = [
 ];
 
 const SERVICES_LINKS: { path: string; title: string }[] = [
-  { path: '/services/websites', title: 'Websites' },
-  { path: '/services/mobile-apps', title: 'Mobile Apps' },
-  { path: '/services/integrations', title: 'Integrations' },
+  { path: '/services/web-design-and-development', title: 'Web Design and Development' },
+  { path: '/services/mobile-app-design-and-development', title: 'Mobile App Design and Development' },
+  { path: '/services/api-integrations-and-automation', title: 'API Integrations and Automation' },
   { path: '/services/cloud-solutions', title: 'Cloud Solutions' }
 ];
 
@@ -65,7 +63,7 @@ const IndexPage: React.FC<PageProps> = () => {
               <div className='lg-mw-half lg-ml-auto lg-pr-2'>
                 <div className='pb-2'>
                   <h3 className='fs-28 c-white pb-1'>Welcome to A to B Designs: Your Gateway to Digital Excellence</h3>
-                  <p className='c-white fs-18'>
+                  <p className='c-white fs-20'>
                     At A to B Designs, we're not just a digital agency; we're architects of innovation, crafting digital solutions that transcend expectations. From web design
                     and development to cutting-edge mobile apps, API integrations, and transformative cloud solutions, we're your partners in turning ideas into digital
                     masterpieces.

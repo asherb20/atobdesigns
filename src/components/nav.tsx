@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { MenuIcon, CloseIcon } from '../lib/icons';
 import NavList from './navList';
+import { Link } from 'gatsby';
 
 const LINKS = [
   {
@@ -25,9 +26,9 @@ const Nav = () => {
     <nav className='pos-sticky top-0 bg-white z-10'>
       <div className='d-flex jc-space-between ai-center pt-1 pr-2 pb-1 pl-2 max-w-lg m-auto'>
         <div>
-          <p className='fs-20 fw-bold m-0'>
+          <Link to='/' className='fs-20 fw-bold m-0 td-none c-black'>
             AtoB<span className='c-dark'>Designs</span>
-          </p>
+          </Link>
         </div>
         <div>
           <button className='d-flex ai-center jc-space-between lg-d-none' onClick={() => setExpMenu(true)}>
