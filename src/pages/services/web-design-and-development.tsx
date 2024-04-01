@@ -7,7 +7,7 @@ import Hero from '../../components/hero';
 import Accordion from '../../components/accordion';
 import CallToAction from '../../components/cta';
 
-const SERVICES_SECTIONS = [
+const SECTIONS = [
   {
     backgroundColor: 'dark',
     fontColor: 'white',
@@ -72,30 +72,22 @@ const WebsitesPage: React.FC<PageProps> = () => {
     <div>
       <Nav />
       {/* main */}
-      <Hero title='Web Design and Development' />
+      <Hero
+        title=' A to B Designs: Crafting Exceptional Web Experiences for Your Brand'
+        content={`Welcome to A to B Designs, your dedicated partner in the world of web design and development. At A to B Designs, we don't just build websites; we create digital experiences that resonate with your audience, elevate your brand, and drive meaningful engagement.`}
+      />
       <div>
-        <section className='pl-2 pr-2 max-w-lg m-auto'>
-          <h3 className='pb-1 fs-32'>
-            A to B Designs: Crafting Exceptional Web Experiences for <span className='c-light'>Your Brand</span>
-          </h3>
-          <p className='fs-20'>
-            Welcome to A to B Designs, your dedicated partner in the world of web design and development. At A to B Designs, we don't just build websites; we create digital
-            experiences that resonate with your audience, elevate your brand, and drive meaningful engagement.
-          </p>
-        </section>
-      </div>
-      <div>
-        <section className='pt-5 pb-5'>
-          <div className='pr-2 pl-2 max-w-lg m-auto'>
+        <section>
+          <div className='pr-2 pb-2 pl-2 max-w-lg m-auto'>
             <h2 className='fs-32'>
-              Our <span className='c-light'>Web Design and Development</span> Services
+              Our <span className='c-dark'>Web Design and Development</span> Services
             </h2>
           </div>
-          {SERVICES_SECTIONS.map(section => (
-            <div className='mt-2 mb-2'>
-              <div className={`bg-${section.backgroundColor} c-${section.fontColor} p-2`}>
-                <div className='max-w-lg lg-d-flex lg-col-gap-2 m-auto'>
-                  <div className='pb-2'>
+          {SECTIONS.map(section => (
+            <div>
+              <div className={`bg-${section.backgroundColor} c-${section.fontColor} pt-5 pr-2 pb-4 pl-2`}>
+                <div className='max-w-lg m-auto'>
+                  <div>
                     <h3 className='fs-28 pb-1'>{section.title}</h3>
                     {section.paragraphs.map(paragraph => (
                       <p className='fs-20 pb-1'>
@@ -122,10 +114,9 @@ const WebsitesPage: React.FC<PageProps> = () => {
       <div>
         <section className='pt-5 pr-2 pb-5 pl-2 max-w-lg m-auto'>
           <p className='fs-28 pb-1'>
-            <strong>
-              Ready to redefine your online presence? Contact A to B Designs today, and let's embark on a journey of crafting exceptional web experiences for your brand.
-            </strong>
+            <strong>Ready to redefine your online presence?</strong>
           </p>
+          <p className='fs-20 pb-2'>Contact A to B Designs today, and let's embark on a journey of crafting exceptional web experiences for your brand.</p>
           <CallToAction to='/contact-us' title='Contact Us Today' />
         </section>
       </div>

@@ -47,8 +47,8 @@ const PortfolioPage: React.FC<PageProps> = () => {
       <div>
         <section className='pb-5'>
           {PORTFOLIO_ITEMS.map(item => (
-            <div className='mb-2'>
-              <div className={`bg-${item.backgroundColor} c-${item.fontColor} pt-5 pr-2 pb-5 pl-2`}>
+            <div>
+              <div className={`bg-${item.backgroundColor} c-${item.fontColor} pt-5 pr-2 pb-5 pl-2 flex-3`}>
                 <div className='max-w-lg lg-d-flex lg-col-gap-2 m-auto'>
                   <div className='flex-2'>
                     <div className='med-d-flex med-col-gap-2 ai-center'>
@@ -67,6 +67,7 @@ const PortfolioPage: React.FC<PageProps> = () => {
                   <div className='flex-1'>{item.image}</div>
                 </div>
               </div>
+              <div className='flex-1' />
             </div>
           ))}
         </section>

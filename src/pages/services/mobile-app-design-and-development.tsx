@@ -79,25 +79,18 @@ const MobileAppsPage: React.FC<PageProps> = () => {
     <div>
       <Nav />
       {/* main */}
-      <Hero title='Mobile App Design and Development' />
+      <Hero
+        title='Welcome to A to B Designs: Your Premier Mobile App Development Partner'
+        content='At A to B Designs, we specialize in turning your innovative ideas into cutting-edge mobile applications that captivate users and elevate your business to new
+            heights. With a proven track record in mobile app design and development, we bring creativity, expertise, and a client-centric approach to every project.'
+      />
       <div>
-        <section className='pl-2 pr-2 max-w-lg m-auto'>
-          <h3 className='pb-1 fs-32'>
-            Welcome to A to B Designs: Your Premier <span className='c-light'>Mobile App Development</span> Partner
-          </h3>
-          <p className='fs-20'>
-            At A to B Designs, we specialize in turning your innovative ideas into cutting-edge mobile applications that captivate users and elevate your business to new
-            heights. With a proven track record in mobile app design and development, we bring creativity, expertise, and a client-centric approach to every project.
-          </p>
-        </section>
-      </div>
-      <div>
-        <section className='pt-5 pb-5'>
+        <section>
           {SERVICES_SECTIONS.map(section => (
-            <div className='mt-2 mb-2'>
-              <div className={`bg-${section.backgroundColor} c-${section.fontColor} p-2`}>
+            <div>
+              <div className={`bg-${section.backgroundColor} c-${section.fontColor} pt-5 pr-2 pb-4 pl-2`}>
                 <div className='max-w-lg lg-d-flex lg-col-gap-2 m-auto'>
-                  <div className='pb-2'>
+                  <div>
                     <h3 className='fs-28 pb-1'>{section.title}</h3>
                     {section.paragraphs.map(paragraph => (
                       <p className='fs-20 pb-1'>
@@ -124,11 +117,9 @@ const MobileAppsPage: React.FC<PageProps> = () => {
       <div>
         <section className='pt-5 pr-2 pb-5 pl-2 max-w-lg m-auto'>
           <p className='fs-28 pb-1'>
-            <strong>
-              Ready to transform your ideas into a powerful mobile app? Contact A to B Designs today to kickstart your journey into unparalleled mobile app design and
-              development.
-            </strong>
+            <strong>Ready to transform your ideas into a powerful mobile app?</strong>
           </p>
+          <p className='fs-20 pb-2'>Contact A to B Designs today to kickstart your journey into unparalleled mobile app design and development.</p>
           <CallToAction to='/contact-us' title='Contact Us Today' />
         </section>
       </div>

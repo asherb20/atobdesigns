@@ -82,30 +82,23 @@ const IntegrationsPage: React.FC<PageProps> = () => {
     <div>
       <Nav />
       {/* main */}
-      <Hero title='API Integrations and Automation' />
+      <Hero
+        title='A to B Designs: Empowering Your Business with Seamless APIs, Integrations, and Automation'
+        content='Unlock the true potential of your business with A to B Designs – Your trusted partner in API development, integrations, and automation solutions. We specialize in
+            creating robust, scalable, and customized solutions that streamline your processes, enhance efficiency, and drive innovation.'
+      />
       <div>
-        <section className='pl-2 pr-2 max-w-lg m-auto'>
-          <h3 className='pb-1 fs-32'>
-            A to B Designs: Empowering Your Business with Seamless <span className='c-light'>APIs, Integrations, and Automation</span>
-          </h3>
-          <p className='fs-20'>
-            Unlock the true potential of your business with A to B Designs – Your trusted partner in API development, integrations, and automation solutions. We specialize in
-            creating robust, scalable, and customized solutions that streamline your processes, enhance efficiency, and drive innovation.
-          </p>
-        </section>
-      </div>
-      <div>
-        <section className='pt-5 pb-5'>
-          <div className='pr-2 pl-2 max-w-lg m-auto'>
+        <section>
+          <div className='pr-2 pb-2 pl-2 max-w-lg m-auto'>
             <h2 className='fs-32'>
-              Our <span className='c-light'>Expertise</span>
+              Our <span className='c-dark'>Expertise</span>
             </h2>
           </div>
           {SERVICES_SECTIONS.map(section => (
-            <div className='mt-2 mb-2'>
-              <div className={`bg-${section.backgroundColor} c-${section.fontColor} p-2`}>
-                <div className='max-w-lg lg-d-flex lg-col-gap-2 m-auto'>
-                  <div className='pb-2'>
+            <div>
+              <div className={`bg-${section.backgroundColor} c-${section.fontColor} pt-5 pr-2 pb-4 pl-2`}>
+                <div className='max-w-lg m-auto'>
+                  <div>
                     <h3 className='fs-28 pb-1'>{section.title}</h3>
                     {section.paragraphs.map(paragraph => (
                       <p className='fs-20 pb-1'>
@@ -132,10 +125,10 @@ const IntegrationsPage: React.FC<PageProps> = () => {
       <div>
         <section className='pt-5 pr-2 pb-5 pl-2 max-w-lg m-auto'>
           <p className='fs-28 pb-1'>
-            <strong>
-              Ready to revolutionize your business processes? Contact A to B Designs today and embark on a journey of seamless APIs, integrations, and automation that propels
-              your business toward unparalleled success.
-            </strong>
+            <strong>Ready to revolutionize your business processes?</strong>
+          </p>
+          <p className='fs-20 pb-2'>
+            Contact A to B Designs today and embark on a journey of seamless APIs, integrations, and automation that propels your business toward unparalleled success.
           </p>
           <CallToAction to='/contact-us' title='Contact Us Today' />
         </section>

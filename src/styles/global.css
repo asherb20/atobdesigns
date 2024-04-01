@@ -341,6 +341,12 @@ ul {
 .min-w-200-px {
   min-width: 200px;
 }
+.col-gap-2 {
+  column-gap: 2em;
+}
+.col-gap-3 {
+  column-gap: 3em;
+}
 
 /* square */
 .square {

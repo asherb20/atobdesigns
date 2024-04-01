@@ -102,30 +102,23 @@ const ServicesPage: React.FC<PageProps> = () => {
     <div>
       <Nav />
       {/* main */}
-      <Hero title='Services' />
+      <Hero
+        title='A to B Designs: Transforming Ideas into Digital Excellence'
+        content='Welcome to A to B Designs, your go-to destination for comprehensive and innovative digital solutions. At A to B Designs, we pride ourselves on providing a suite of
+            services that cover the entire spectrum of your digital needs, ensuring your business thrives in the dynamic online landscape.'
+      />
       <div>
-        <section className='pl-2 pr-2 max-w-lg m-auto'>
-          <h3 className='pb-1 fs-32'>
-            A to B Designs: Transforming Ideas into <span className='c-light'>Digital Excellence</span>
-          </h3>
-          <p className='fs-20'>
-            Welcome to A to B Designs, your go-to destination for comprehensive and innovative digital solutions. At A to B Designs, we pride ourselves on providing a suite of
-            services that cover the entire spectrum of your digital needs, ensuring your business thrives in the dynamic online landscape.
-          </p>
-        </section>
-      </div>
-      <div>
-        <section className='pt-5 pb-5'>
-          <div className='pr-2 pl-2 max-w-lg m-auto'>
-            <h2 className='fs-32'>
+        <section>
+          <div className='pr-2 pl-2 pb-2 max-w-lg m-auto'>
+            <h2 className='fs-36'>
               Our <span className='c-light'>Services</span>
             </h2>
           </div>
           {SERVICES_SECTIONS.map(section => (
-            <div className='mt-2 mb-2'>
-              <div className={`bg-${section.backgroundColor} c-${section.fontColor} p-2`}>
+            <div>
+              <div className={`bg-${section.backgroundColor} c-${section.fontColor} pt-5 pr-2 pb-5 pl-2`}>
                 <div className='max-w-lg lg-d-flex lg-col-gap-2 m-auto'>
-                  <div className='pb-2'>
+                  <div className='pb-2 flex-3'>
                     <h3 className='fs-28 pb-1'>{section.title}</h3>
                     {section.paragraphs.map(paragraph => (
                       <p className='fs-20 pb-1'>
@@ -133,7 +126,7 @@ const ServicesPage: React.FC<PageProps> = () => {
                       </p>
                     ))}
                   </div>
-                  <div>
+                  <div className='flex-1'>
                     <BoxLink path={section.path} title={section.title} />
                   </div>
                 </div>
@@ -155,8 +148,9 @@ const ServicesPage: React.FC<PageProps> = () => {
       <div>
         <section className='pt-5 pr-2 pb-5 pl-2 max-w-lg m-auto'>
           <p className='fs-28 pb-1'>
-            <strong>Ready to embark on a journey of digital transformation? Contact A to B Designs today and let's turn your ideas into digital excellence.</strong>
+            <strong>Ready to embark on a journey of digital transformation?</strong>
           </p>
+          <p className='fs-20 pb-2'>Contact A to B Designs today and let's turn your ideas into digital excellence.</p>
           <CallToAction to='/contact-us' title='Contact Us Today' />
         </section>
       </div>
