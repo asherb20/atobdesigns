@@ -5,7 +5,6 @@ import '../styles/global.css';
 import Footer from '../components/footer';
 import Hero from '../components/hero';
 import CallToAction from '../components/cta';
-import { StaticImage } from 'gatsby-plugin-image';
 import { EmailIcon, PhoneIcon } from '../lib/icons';
 
 const ContactUsPage: React.FC<PageProps> = () => {
@@ -55,7 +54,8 @@ const ContactUsPage: React.FC<PageProps> = () => {
             </div>
           </div>
           <div className='max-w-sm flex-1'>
-            <form name='contact' action='/success/' method='post' className='bg-dark p-1' data-netlify='true'>
+            <form name='contact' action='/success' method='post' className='bg-dark p-1' netlify>
+              <input type='hidden' name='form-name' value='contact' />
               <div className='border-solid border-white border-1 p-05 mb-1'>
                 <input className='fs-16 bg-none border-none c-white outline-none w-100' type='text' name='name' placeholder='Name*' required />
               </div>
