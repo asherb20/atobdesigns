@@ -10,6 +10,14 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.atobdesigns.com',
+        sitemap: 'https://www.example.com/sitemap-0.xml',
+        policy: [{ userAgent: '*', disallow: '/success' }]
+      }
+    },
     'gatsby-plugin-image',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
