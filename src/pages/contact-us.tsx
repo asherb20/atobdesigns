@@ -30,21 +30,21 @@ const ContactUsPage: React.FC<PageProps> = () => {
               <h3 className='fs-28 c-dark pb-1'>Get in Touch</h3>
               <p className='fs-20 d-flex ai-center pb-1'>
                 <EmailIcon color='#247c7c' height={16} width={16} />
-                <div className='pl-05'>
+                <span className='pl-05'>
                   <strong>Email Us:</strong>{' '}
                   <a href='mailto:info@atobdesigns.com' className='c-light td-none fw-bold'>
                     info@atobdesigns.com
                   </a>
-                </div>
+                </span>
               </p>
               <p className='fs-20 d-flex ai-center pb-1'>
                 <PhoneIcon color='#247c7c' height={20} width={20} />
-                <div className='pl-05'>
+                <span className='pl-05'>
                   <strong>Call Us:</strong>{' '}
                   <a href='tel:4698857988' className='c-light td-none fw-bold'>
                     (469)885-7988
                   </a>
-                </div>
+                </span>
               </p>
             </div>
             <div>
@@ -55,20 +55,20 @@ const ContactUsPage: React.FC<PageProps> = () => {
             </div>
           </div>
           <div className='max-w-sm flex-1'>
-            <form name='contact' method='POST' className='bg-dark p-1' netlify>
+            <form name='contact' action='/success' method='post' className='bg-dark p-1' data-netlify='true'>
               <div className='border-solid border-white border-1 p-05 mb-1'>
-                <input className='fs-16 bg-none border-none c-white outline-none w-100' type='text' placeholder='Name*' required />
+                <input className='fs-16 bg-none border-none c-white outline-none w-100' type='text' name='name' placeholder='Name*' required />
               </div>
               <div className='border-solid border-white border-1 p-05 mb-1'>
-                <input className='fs-16 bg-none border-none c-white outline-none w-100' type='email' placeholder='Email*' required />
+                <input className='fs-16 bg-none border-none c-white outline-none w-100' type='email' name='email' placeholder='Email*' required />
               </div>
               <div className='border-solid border-white border-1 p-05 mb-1'>
-                <input className='fs-16 bg-none border-none c-white outline-none w-100' type='phone' placeholder='Phone*' required />
+                <input className='fs-16 bg-none border-none c-white outline-none w-100' type='tel' name='phone' placeholder='Phone*' required />
               </div>
               <div className='border-solid border-white border-1 p-05 mb-1'>
-                <textarea className='fs-16 bg-none border-none c-white outline-none w-100' rows={5} placeholder='Message*' required />
+                <textarea className='fs-16 bg-none border-none c-white outline-none w-100' rows={5} name='message' placeholder='Message*' required />
               </div>
-              <input className='fs-16 bg-black c-white p-1 w-100 border-black border-1 border-solid' type='submit' value='Send Message' />
+              <input className='fs-16 bg-black c-white p-1 w-100 border-black border-1 border-solid pointer' type='submit' value='Send Message' />
             </form>
           </div>
         </div>
