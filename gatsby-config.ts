@@ -2,7 +2,7 @@ import type { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `atobdesigns`,
+    title: `A to B Designs`,
     siteUrl: `https://www.atobdesigns.com`
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
@@ -33,6 +33,14 @@ const config: GatsbyConfig = {
             file: `https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap`
           }
         ]
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'GTM-P6QFZ7Q6',
+        includeInDevelopment: false,
+        defaultDataLayer: { platform: 'gatsby' }
       }
     }
   ]

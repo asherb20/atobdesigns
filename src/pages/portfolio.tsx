@@ -139,4 +139,13 @@ const PortfolioPage: React.FC<PageProps> = () => {
 
 export default PortfolioPage;
 
-export const Head: HeadFC = () => <title>Portfolio | A to B Designs</title>;
+export const Head: HeadFC = () => (
+  <>
+    <title>A to B Designs Portfolio</title>
+    <meta
+      name='description'
+      content="Explore A to B Designs' portfolio featuring the Make It Make Sense website project. Discover how we crafted an engaging platform for the indie band."
+    />
+    <meta name='keywords' content='Make It Make Sense website, band website development, music website design, web development portfolio, A to B Designs, band platform' />
+  </>
+);

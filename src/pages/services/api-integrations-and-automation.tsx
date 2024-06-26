@@ -140,4 +140,13 @@ const IntegrationsPage: React.FC<PageProps> = () => {
 
 export default IntegrationsPage;
 
-export const Head: HeadFC = () => <title>API Integrations and Automation | A to B Designs</title>;
+export const Head: HeadFC = () => (
+  <>
+    <title>A to B Designs: API Development, Integrations, & Automation Solutions</title>
+    <meta
+      name='description'
+      content="Explore A to B Designs' expert API development, seamless integrations, and automation solutions. Streamline business processes with scalable, customized API solutions, integrations, and automation services."
+    />
+    <meta name='keywords' content='API development, integrations, automation solutions, scalable API solutions' />
+  </>
+);

@@ -161,4 +161,16 @@ const ServicesPage: React.FC<PageProps> = () => {
 
 export default ServicesPage;
 
-export const Head: HeadFC = () => <title>Services | A to B Designs</title>;
+export const Head: HeadFC = () => (
+  <>
+    <title>A to B Designs | Transforming Ideas into Digital Excellence</title>
+    <meta
+      name='description'
+      content='Discover A to B Designs for comprehensive digital solutions including web design, mobile app development, API integrations, and cloud solutions. Elevate your business with our expertise in creating innovative digital experiences.'
+    />
+    <meta
+      name='keywords'
+      content='A to B Designs, digital solutions, web design, mobile app development, API integrations, cloud solutions, digital transformation, innovative digital experiences'
+    />
+  </>
+);

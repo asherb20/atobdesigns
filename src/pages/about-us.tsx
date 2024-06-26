@@ -146,4 +146,16 @@ const AboutUsPage: React.FC<PageProps> = () => {
 
 export default AboutUsPage;
 
-export const Head: HeadFC = () => <title>About Us | A to B Designs</title>;
+export const Head: HeadFC = () => (
+  <>
+    <title>A to B Designs | Crafting Digital Excellence for Web, Mobile, API, and Cloud</title>
+    <meta
+      name='description'
+      content='At A to B Designs, we turn visions into impactful digital experiences. Specializing in web design, mobile apps, API integrations, and cloud solutions, we ensure your brand excels in the digital world.'
+    />
+    <meta
+      name='keywords'
+      content='A to B Designs, digital excellence, web design, mobile app development, API integrations, cloud solutions, digital transformation, client-centric approach'
+    />
+  </>
+);

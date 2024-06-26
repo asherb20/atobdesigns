@@ -127,4 +127,13 @@ const WebsitesPage: React.FC<PageProps> = () => {
 
 export default WebsitesPage;
 
-export const Head: HeadFC = () => <title>Web Design and Development | A to B Designs</title>;
+export const Head: HeadFC = () => (
+  <>
+    <title>A to B Designs: Exceptional Web Design & Development Services</title>
+    <meta
+      name='description'
+      content="Explore A to B Designs' exceptional web design and development services. From innovative design to responsive development and SEO integration, we create bespoke websites that elevate your brand and engage your audience."
+    />
+    <meta name='keywords' content='web design and development, innovative design, responsive development, SEO integration' />
+  </>
+);

@@ -197,4 +197,16 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Home | A to B Designs</title>;
+export const Head: HeadFC = () => (
+  <>
+    <title>A to B Designs | Your Gateway to Digital Excellence</title>
+    <meta
+      name='description'
+      content='Discover A to B Designs, where innovation meets functionality. We offer web design, mobile app development, API integrations, and cloud solutions that transform ideas into digital realities. Contact us today!'
+    />
+    <meta
+      name='keywords'
+      content='A to B Designs, digital agency, web design, mobile app development, API integrations, cloud solutions, digital excellence, digital innovation'
+    />
+  </>
+);

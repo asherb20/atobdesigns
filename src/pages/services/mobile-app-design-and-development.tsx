@@ -130,4 +130,13 @@ const MobileAppsPage: React.FC<PageProps> = () => {
 
 export default MobileAppsPage;
 
-export const Head: HeadFC = () => <title>Mobile App Design and Development | A to B Designs</title>;
+export const Head: HeadFC = () => (
+  <>
+    <title>A to B Designs: Premier Mobile App Design & Development Services</title>
+    <meta
+      name='description'
+      content="Discover A to B Designs' premier mobile app design and development services. From user-centric design to cross-platform expertise, we create cutting-edge mobile applications tailored to your business needs."
+    />
+    <meta name='keywords' content='mobile app design, mobile app development, user-centric design, cross-platform development' />
+  </>
+);

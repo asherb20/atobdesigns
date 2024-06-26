@@ -55,7 +55,7 @@ const ContactUsPage: React.FC<PageProps> = () => {
             </div>
           </div>
           <div className='max-w-sm flex-1'>
-            <form name='contact' method='POST' className='bg-dark p-1' data-netlify='true'>
+            <form name='contact' method='POST' className='bg-dark p-1' netlify>
               <div className='border-solid border-white border-1 p-05 mb-1'>
                 <input className='fs-16 bg-none border-none c-white outline-none w-100' type='text' placeholder='Name*' required />
               </div>
@@ -85,4 +85,13 @@ const ContactUsPage: React.FC<PageProps> = () => {
 
 export default ContactUsPage;
 
-export const Head: HeadFC = () => <title>Contact Us | A to B Designs</title>;
+export const Head: HeadFC = () => (
+  <>
+    <title>Contact A to B Designs - Software Development Services</title>
+    <meta
+      name='description'
+      content='Contact A to B Designs today to discuss your software project or get support. Email us at info@atobdesigns.com or call +1 (469) 885-7988. Your journey from A to B begins here!'
+    />
+    <meta name='keywords' content='software development services, expert software development, discuss your project, get support' />
+  </>
+);

@@ -140,4 +140,13 @@ const CloudSolutionsPage: React.FC<PageProps> = () => {
 
 export default CloudSolutionsPage;
 
-export const Head: HeadFC = () => <title>Cloud Solutions | A to B Designs</title>;
+export const Head: HeadFC = () => (
+  <>
+    <title>A to B Designs: Cloud Services Development for GCP, AWS, & Salesforce</title>
+    <meta
+      name='description'
+      content="Explore A to B Designs' expert cloud services development for Google Cloud Platform (GCP), Amazon Web Services (AWS), and Salesforce. Transform your business with scalable, secure, and innovative cloud solutions tailored to your needs."
+    />
+    <meta name='keywords' content='cloud services development, GCP, AWS, Salesforce, scalable cloud solutions' />
+  </>
+);
