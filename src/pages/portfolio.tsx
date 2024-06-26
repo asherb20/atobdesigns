@@ -13,29 +13,84 @@ const PORTFOLIO_ITEMS = [
     backgroundColor: 'dark',
     fontColor: 'white',
     url: 'https://www.makeitmakesense.band/',
-    title: 'Make It Make Sense Band Website',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    title: 'Make It Make Sense – Website Development Project',
+    content: (
+      <div className='pb-1'>
+        <div className='pb-1'>
+          <p className='fs-20 pb-05'>
+            <strong>Overview:</strong>
+          </p>
+          <p className='fs-18'>
+            Make It Make Sense is an engaging and dynamic online platform for the indie band, Make It Make Sense. The website showcases the band's unique identity through a
+            visually appealing design and interactive features.
+          </p>
+        </div>
+        <div className='pb-1'>
+          <p className='fs-20 pb-05'>
+            <strong>Features:</strong>
+          </p>
+          <ul className='fs-18 pl-1'>
+            <li>
+              <p>
+                <strong>Home Page:</strong> A captivating introduction with the latest news and featured content.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>Music Section:</strong> Integrated music player with the band's latest tracks and albums, including streaming options.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>Contact & Social Links:</strong> Easy access to contact information and social media profiles for connecting with fans.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div className='pb-1'>
+          <p className='fs-20 pb-05'>
+            <strong>Technologies:</strong>
+          </p>
+          <ul className='fs-18 pl-1'>
+            <li>
+              <p>
+                <strong>Front-end:</strong> HTML5, CSS3, JavaScript, TypeScript, Gatsbyjs
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>Back-end:</strong> Node.js, Netlify
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>Design:</strong> Figma
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    ),
     image: <StaticImage src='../images/makeitmakesense_preview.png' alt='Make It Make Sense Band Website' />
-  },
-  {
-    backgroundColor: 'white',
-    fontColor: 'black',
-    url: 'https://www.us-ecologic.com/',
-    title: 'US-EcoLogic Website',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    image: <StaticImage src='../images/us-ecologic-preview.png' alt='US-EcoLogic Website' />
-  },
-  {
-    backgroundColor: 'dark',
-    fontColor: 'white',
-    url: 'https://efficiencypromise.com/',
-    title: 'Efficiency Promise Web App',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    image: <StaticImage src='../images/efficiencypromise_preview.png' alt='Efficiency Promise Web App' />
   }
+  // {
+  //   backgroundColor: 'white',
+  //   fontColor: 'black',
+  //   url: 'https://www.us-ecologic.com/',
+  //   title: 'US-EcoLogic Website',
+  //   content:
+  //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  //   image: <StaticImage src='../images/us-ecologic-preview.png' alt='US-EcoLogic Website' />
+  // },
+  // {
+  //   backgroundColor: 'dark',
+  //   fontColor: 'white',
+  //   url: 'https://efficiencypromise.com/',
+  //   title: 'Efficiency Promise Web App',
+  //   content:
+  //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  //   image: <StaticImage src='../images/efficiencypromise_preview.png' alt='Efficiency Promise Web App' />
+  // }
 ];
 
 const PortfolioPage: React.FC<PageProps> = () => {
@@ -47,7 +102,7 @@ const PortfolioPage: React.FC<PageProps> = () => {
       <div>
         <section className='pb-5'>
           {PORTFOLIO_ITEMS.map(item => (
-            <div>
+            <div key={item.url}>
               <div className={`bg-${item.backgroundColor} c-${item.fontColor} pt-5 pr-2 pb-5 pl-2 flex-3`}>
                 <div className='max-w-lg lg-d-flex lg-col-gap-2 m-auto'>
                   <div className='flex-2'>
@@ -62,7 +117,7 @@ const PortfolioPage: React.FC<PageProps> = () => {
                         <span className='pl-025'>See Live</span>
                       </a>
                     </div>
-                    <p className='fs-20 pb-1'>{item.content}</p>
+                    {item.content}
                   </div>
                   <div className='flex-1'>{item.image}</div>
                 </div>

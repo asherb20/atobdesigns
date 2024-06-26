@@ -21,6 +21,10 @@ ul {
   cursor: pointer;
 }
 
+.outline-none {
+  outline: none;
+}
+
 .cta-light:hover {
   background: none;
   color: #3aafa9;
@@ -67,6 +71,14 @@ ul {
 .bg-white {
   background-color: #fff;
 }
+.bg-none {
+  background-color: transparent;
+}
+input::placeholder,
+textarea::placeholder {
+  color: white;
+  opacity: 0.75;
+}
 
 /* border */
 .border-solid {
@@ -83,6 +95,12 @@ ul {
 }
 .border-black {
   border-color: black;
+}
+.border-box {
+  box-sizing: border-box;
+}
+.border-none {
+  border: none;
 }
 
 /* padding */
@@ -121,6 +139,9 @@ ul {
   padding-top: 10em;
 }
 
+.pr-05 {
+  padding-left: 0.5em;
+}
 .pr-1 {
   padding-right: 1em;
 }
@@ -329,6 +350,9 @@ ul {
 }
 
 /* sizing */
+.max-w-sm {
+  max-width: 576px;
+}
 .max-w-lg {
   max-width: 1200px;
 }
@@ -414,6 +438,12 @@ ul {
   }
   .lg-col-gap-2 {
     column-gap: 2em;
+  }
+  .lg-col-gap-3 {
+    column-gap: 3em;
+  }
+  .lg-col-gap-4 {
+    column-gap: 4em;
   }
   .lg-pt-3 {
     padding-top: 5em;

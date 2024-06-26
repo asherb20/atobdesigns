@@ -9,9 +9,9 @@ import CallToAction from '../components/cta';
 import BoxLink from '../components/boxLink';
 
 const SLIDES: any[] = [
-  <StaticImage src='../images/makeitmakesense_preview.png' alt='Make It Make Sense Band Website' />,
-  <StaticImage src='../images/us-ecologic-preview.png' alt='US-EcoLogic Website' />,
-  <StaticImage src='../images/efficiencypromise_preview.png' alt='Efficiency Promise Web App' />
+  <StaticImage src='../images/makeitmakesense_preview.png' alt='Make It Make Sense Band Website' />
+  // <StaticImage src='../images/us-ecologic-preview.png' alt='US-EcoLogic Website' />,
+  // <StaticImage src='../images/efficiencypromise_preview.png' alt='Efficiency Promise Web App' />
 ];
 
 const SERVICES_LINKS: { path: string; title: string }[] = [
