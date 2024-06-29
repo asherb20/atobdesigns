@@ -5,8 +5,10 @@ import '../styles/global.css';
 import Footer from '../components/footer';
 import Hero from '../components/hero';
 import CallToAction from '../components/cta';
-import { StaticImage } from 'gatsby-plugin-image';
+import { StaticImage, GatsbyImage } from 'gatsby-plugin-image';
 import { URLIcon } from '../lib/icons';
+import { graphql } from 'gatsby';
+import BlockContent from '@sanity/block-content-to-react';
 
 const PORTFOLIO_ITEMS = [
   {
@@ -93,7 +95,7 @@ const PORTFOLIO_ITEMS = [
   // }
 ];
 
-const PortfolioPage: React.FC<PageProps> = () => {
+const PortfolioPage: React.FC<PageProps> = ({ data }) => {
   return (
     <div>
       <Nav />
@@ -101,7 +103,7 @@ const PortfolioPage: React.FC<PageProps> = () => {
       <Hero title='Portfolio' />
       <div>
         <section className='pb-5'>
-          {PORTFOLIO_ITEMS.map(item => (
+          {/* {PORTFOLIO_ITEMS.map(item => (
             <div key={item.url}>
               <div className={`bg-${item.backgroundColor} c-${item.fontColor} pt-5 pr-2 pb-5 pl-2 flex-3`}>
                 <div className='max-w-lg lg-d-flex lg-col-gap-2 m-auto'>
@@ -124,7 +126,37 @@ const PortfolioPage: React.FC<PageProps> = () => {
               </div>
               <div className='flex-1' />
             </div>
-          ))}
+          ))} */}
+          {data.allSanityProject.nodes.map((node, index) => {
+            const bgColor = index % 3 === 0 ? 'dark' : 'white';
+            const fontColor = index % 3 === 0 ? 'white' : 'black';
+            return (
+              <div key={node.id}>
+                <div className={`bg-${bgColor} c-${fontColor} pt-5 pr-2 pb-5 pl-2 flex-3`}>
+                  <div className='max-w-lg lg-d-flex lg-col-gap-2 m-auto'>
+                    <div className='flex-2'>
+                      <div className='med-d-flex med-col-gap-2 ai-center'>
+                        <h3 className='fs-28 pb-1'>{node.title}</h3>
+                        <a
+                          href={node.url}
+                          style={{ width: 250, height: 50 }}
+                          className={`mb-1 fs-20 td-none c-${fontColor} border-solid border-1 border-${fontColor} d-flex jc-center ai-center`}
+                        >
+                          <URLIcon width={20} height={20} color={fontColor} />
+                          <span className='pl-025'>See Live</span>
+                        </a>
+                      </div>
+                      <BlockContent blocks={node.content} />
+                    </div>
+                    <div className='flex-1'>
+                      <GatsbyImage image={node.image.asset.gatsbyImageData} alt={node.image.asset.altText} />
+                    </div>
+                  </div>
+                </div>
+                <div className='flex-1' />
+              </div>
+            );
+          })}
         </section>
       </div>
       <div>
@@ -149,3 +181,34 @@ export const Head: HeadFC = () => (
     <meta name='keywords' content='Make It Make Sense website, band website development, music website design, web development portfolio, A to B Designs, band platform' />
   </>
 );
+
+export const query = graphql`
+  query {
+    allSanityProject {
+      nodes {
+        id
+        title
+        url
+        image {
+          asset {
+            altText
+            gatsbyImageData
+          }
+        }
+        content {
+          _key
+          _type
+          children {
+            _key
+            _type
+            marks
+            text
+          }
+          style
+          listItem
+          level
+        }
+      }
+    }
+  }
+`;

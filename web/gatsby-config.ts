@@ -5,9 +5,6 @@ const config: GatsbyConfig = {
     title: `A to B Designs`,
     siteUrl: `https://www.atobdesigns.com`
   },
-  // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
-  // If you use VSCode you can also use the GraphQL plugin
-  // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
     {
@@ -49,6 +46,13 @@ const config: GatsbyConfig = {
         id: 'GTM-P6QFZ7Q6',
         includeInDevelopment: false,
         defaultDataLayer: { platform: 'gatsby' }
+      }
+    },
+    {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: 'u97u3cga',
+        dataset: 'production'
       }
     }
   ]
