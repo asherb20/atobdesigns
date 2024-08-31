@@ -5,7 +5,7 @@ import '../styles/global.css';
 import Footer from '../components/footer';
 import Hero from '../components/hero';
 import CallToAction from '../components/cta';
-import { StaticImage, GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { URLIcon } from '../lib/icons';
 import { graphql } from 'gatsby';
 import BlockContent from '@sanity/block-content-to-react';
@@ -19,8 +19,8 @@ const PortfolioPage: React.FC<PageProps> = ({ data }: { data: any }) => {
       <div>
         <section className='pb-5'>
           {data.allSanityProject.nodes.map((node: any, index: number) => {
-            const bgColor = index % 3 === 0 ? 'dark' : 'white';
-            const fontColor = index % 3 === 0 ? 'white' : 'black';
+            const bgColor = (index + 1) % 2 === 0 ? 'white' : 'dark';
+            const fontColor = (index + 1) % 2 === 0 ? 'black' : 'white';
             return (
               <div key={node.id}>
                 <div className={`bg-${bgColor} c-${fontColor} pt-5 pr-2 pb-5 pl-2 flex-3`}>
@@ -32,12 +32,14 @@ const PortfolioPage: React.FC<PageProps> = ({ data }: { data: any }) => {
                           href={node.url}
                           style={{ width: 250, height: 50 }}
                           className={`mb-1 fs-20 td-none c-${fontColor} border-solid border-1 border-${fontColor} d-flex jc-center ai-center`}
+                          target='_blank'
+                          referrerPolicy='no-referrer'
                         >
                           <URLIcon width={20} height={20} color={fontColor} />
                           <span className='pl-025'>See Live</span>
                         </a>
                       </div>
-                      <BlockContent blocks={node._rawContent} />
+                      <BlockContent className='block-content' blocks={node._rawContent} />
                     </div>
                     <div className='flex-1'>
                       <GatsbyImage image={node.image.asset.gatsbyImageData} alt={node.image.asset.altText} />

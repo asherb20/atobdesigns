@@ -526,3 +526,13 @@ textarea::placeholder {
     height: 200px;
   }
 }
+
+/* block content */
+
+.block-content > * {
+  padding-bottom: 1em;
+}
+
+.block-content > ul {
+  padding-left: 2em;
+}
