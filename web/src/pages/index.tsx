@@ -1,18 +1,13 @@
 import * as React from 'react';
+import { graphql } from 'gatsby';
 import type { HeadFC, PageProps } from 'gatsby';
 import Nav from '../components/nav';
 import '../styles/global.css';
 import Carousel from '../components/carousel';
-import { StaticImage } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import Footer from '../components/footer';
 import CallToAction from '../components/cta';
 import BoxLink from '../components/boxLink';
-
-const SLIDES: any[] = [
-  <StaticImage src='../images/makeitmakesense_preview.png' alt='Make It Make Sense Band Website' />
-  // <StaticImage src='../images/us-ecologic-preview.png' alt='US-EcoLogic Website' />,
-  // <StaticImage src='../images/efficiencypromise_preview.png' alt='Efficiency Promise Web App' />
-];
 
 const SERVICES_LINKS: { path: string; title: string }[] = [
   { path: '/services/web-design-and-development', title: 'Web Design and Development' },
@@ -33,7 +28,11 @@ const PROCESS_ITEMS = [
   { step: 4, title: 'Deliver', desc: 'We will present and deliver the final product for feedback and review.' }
 ];
 
-const IndexPage: React.FC<PageProps> = () => {
+const IndexPage: React.FC<PageProps> = ({ data }: { data: any }) => {
+  const slides = data.allSanityProject.nodes.map((node: any) => {
+    return <GatsbyImage image={node.image.asset.gatsbyImageData} alt={node.image.asset.altText} />;
+  });
+
   return (
     <div>
       <Nav />
@@ -51,7 +50,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <CallToAction to='/contact-us' title='Book Free Consultation' />
           </div>
           <div className='med-flex-1'>
-            <Carousel slides={SLIDES} />
+            <Carousel slides={slides} />
           </div>
         </div>
       </div>
@@ -180,7 +179,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <div className='pt-5 pr-2 pb-5 pl-2 max-w-lg m-auto'>
             <p className='c-white fs-28 pb-2'>Digital Solutions You Can Be Proud Of</p>
             <div className='med-d-flex med-col-gap-2'>
-              {SLIDES.map(slide => (
+              {slides.map((slide: any) => (
                 <div className='pb-2'>{slide}</div>
               ))}
             </div>
@@ -210,3 +209,21 @@ export const Head: HeadFC = () => (
     />
   </>
 );
+
+export const query = graphql`
+  query {
+    allSanityProject {
+      nodes {
+        id
+        title
+        url
+        image {
+          asset {
+            altText
+            gatsbyImageData
+          }
+        }
+      }
+    }
+  }
+`;
