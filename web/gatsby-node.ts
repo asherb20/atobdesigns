@@ -11,6 +11,7 @@ export const createPages = async ({ graphql, actions }: { graphql: any; actions:
         nodes {
           id
           title
+          description
           slug {
             current
           }
@@ -21,7 +22,7 @@ export const createPages = async ({ graphql, actions }: { graphql: any; actions:
               asset {
                 id
                 altText
-                gatsbyImageData
+                gatsbyImageData(width: 50, height: 50)
               }
             }
           }

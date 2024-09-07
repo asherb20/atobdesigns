@@ -87,6 +87,9 @@ textarea::placeholder {
 .border-1 {
   border-width: 1px;
 }
+.border-3 {
+  border-width: 3px;
+}
 .border-white {
   border-color: #fff;
 }
@@ -101,6 +104,9 @@ textarea::placeholder {
 }
 .border-none {
   border: none;
+}
+.border-circle {
+  border-radius: 50%;
 }
 
 /* padding */
@@ -327,6 +333,9 @@ textarea::placeholder {
 .ai-center {
   align-items: center;
 }
+.ai-flex-end {
+  align-items: flex-end;
+}
 .z-1 {
   z-index: 1;
 }
@@ -352,6 +361,9 @@ textarea::placeholder {
 /* sizing */
 .max-w-sm {
   max-width: 576px;
+}
+.max-w-md {
+  max-width: 768px;
 }
 .max-w-lg {
   max-width: 1200px;
@@ -531,6 +543,8 @@ textarea::placeholder {
 
 .block-content > * {
   padding-bottom: 1em;
+  line-height: 2;
+  word-wrap: break-word;
 }
 
 .block-content > ul {
