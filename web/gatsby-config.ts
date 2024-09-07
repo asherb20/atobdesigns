@@ -11,7 +11,7 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://www.atobdesigns.com',
-        sitemap: 'https://www.example.com/sitemap-0.xml',
+        sitemap: 'https://www.atobdesigns.com/sitemap-0.xml',
         policy: [{ userAgent: '*', disallow: '/success' }]
       }
     },
