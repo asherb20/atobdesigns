@@ -16,6 +16,7 @@ const LINKS = [
   },
   { slug: 'about-us', title: 'About Us' },
   { slug: 'portfolio', title: 'Portfolio' },
+  { slug: 'blog', title: 'Blog' },
   { slug: 'contact-us', title: 'Contact Us' }
 ];
 

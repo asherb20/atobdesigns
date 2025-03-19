@@ -18,7 +18,7 @@ const SERVICES_LINKS: { path: string; title: string }[] = [
 
 const SKILLS = [
   { category: 'Languages & Frameworks', items: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Python', 'Go', 'SQL', 'React', 'Next.js', 'Gatsby'] },
-  { category: 'Tools & Technologies', items: ['Google Cloud', 'AWS', 'Salesforce', 'Digital Ocean', 'Netlify', 'Sanity', 'Contentful', 'Bitbucket', 'Github', 'Figma'] }
+  { category: 'Tools & Technologies', items: ['Google Cloud', 'AWS', 'Salesforce', 'WordPress', 'Netlify', 'Sanity', 'Contentful', 'Bitbucket', 'Github', 'Figma'] }
 ];
 
 const PROCESS_ITEMS = [
@@ -68,7 +68,7 @@ const IndexPage: React.FC<PageProps> = ({ data }: { data: any }) => {
                     masterpieces.
                   </p>
                 </div>
-                <CallToAction to='/contact-us' title='Learn More About Us' backgroundColor='black' />
+                <CallToAction to='/about-us' title='Learn More About Us' backgroundColor='black' />
               </div>
             </section>
             <section className='pt-5 pr-2 pb-2 pl-2 lg-flex-1'>

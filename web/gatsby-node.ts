@@ -34,6 +34,7 @@ export const createPages = async ({ graphql, actions }: { graphql: any; actions:
   `);
 
   if (result.errors) {
+    console.error(result.errors);
     throw result.errors;
   }
 

@@ -35,5 +35,10 @@ export default {
       title: 'Content',
       of: [{type: 'block'}, {type: 'image'}],
     },
+    {
+      type: 'image',
+      name: 'banner',
+      title: 'Banner',
+    },
   ],
 }
