@@ -5,5 +5,5 @@
 - [x] Core pages
 - [x] Sanity CMS
 - [x] Blog post page generation
-- [ ] Blog posts page
+- [x] Blog posts page
 - [ ] Portfolio page generation

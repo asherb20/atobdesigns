@@ -36,9 +36,9 @@ export default {
       of: [{type: 'block'}, {type: 'image'}],
     },
     {
-      type: 'image',
-      name: 'banner',
-      title: 'Banner',
+      type: 'string',
+      name: 'blogType',
+      title: 'Type',
     },
   ],
 }
