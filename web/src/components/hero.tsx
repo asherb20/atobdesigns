@@ -1,5 +1,6 @@
 import * as React from 'react';
 import CallToAction from './cta';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Hero = ({ title, content }: { title: string; content?: string }) => {
   return (
@@ -16,6 +17,7 @@ const Hero = ({ title, content }: { title: string; content?: string }) => {
               <div className='square bg-dark pos-abs top-0 left-0 z-1' />
               <div className='square bg-light pos-abs top-1 left-1' />
             </div>
+            {/* <StaticImage src='../images/atobdesigns_logo.png' alt='A to B Designs Logo' /> */}
           </div>
         </div>
       </div>

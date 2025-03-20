@@ -12,6 +12,13 @@ export default {
       type: 'image',
       name: 'image',
       title: 'Image',
+      fields: [
+        {
+          type: 'string',
+          name: 'altText',
+          title: 'Alternative Text',
+        },
+      ],
     },
   ],
 }

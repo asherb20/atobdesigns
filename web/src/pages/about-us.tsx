@@ -109,7 +109,7 @@ const AboutUsPage: React.FC<PageProps> = () => {
           </div>
           <div className='lg-d-flex lg-flex-wrap col-gap-2'>
             {SERVICES_LINKS.map((link, ind) => (
-              <Link to={link.to} key={ind} className='p-2 mb-2 bg-light c-white d-block td-none lg-flex-50'>
+              <Link to={link.to} key={ind} className='p-2 mb-2 bg-light c-white d-block td-none lg-flex-50 box-shadow-hover trans-all'>
                 <h3 className='fs-24'>{link.title}</h3>
                 <p className='fs-20 pt-1 pb-1'>{link.content}</p>
                 <div className='d-flex jc-flex-end'>

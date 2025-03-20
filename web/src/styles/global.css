@@ -25,6 +25,11 @@ ul {
   outline: none;
 }
 
+/* Box Link */
+.box-shadow-hover:hover {
+  box-shadow: 10px 10px #247c7c;
+}
+
 .cta-light:hover {
   background: none;
   color: #3aafa9;
@@ -376,6 +381,9 @@ textarea::placeholder {
 }
 .min-w-200-px {
   min-width: 200px;
+}
+.min-h-250-px {
+  min-height: 250px;
 }
 .col-gap-2 {
   column-gap: 2em;

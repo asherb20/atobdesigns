@@ -35,5 +35,10 @@ export default {
       title: 'Content',
       of: [{type: 'block'}, {type: 'image'}],
     },
+    {
+      type: 'string',
+      name: 'blogType',
+      title: 'Type',
+    },
   ],
 }
