@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "sanity dev",
     "start": "sanity start",
-    "build": "sanity deploy-graphql && sanity build",
+    "build": "sanity graphql deploy && sanity build",
     "build_toml": "echo -e \"[[redirects]]\n\tfrom = \"/*\"\n\tto = \"/\"\n\tstatus = 200\" > /dist/netlify.toml",
     "deploy": "sanity deploy",
     "deploy-graphql": "sanity graphql deploy"
